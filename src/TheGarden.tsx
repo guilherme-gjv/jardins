@@ -3,10 +3,12 @@ import Plant from "./components/Plant/Plant";
 
 const TheGarden: React.FC = () => {
   return (
-    <div className="bg-green-600 text-white text-center h-screen flex flex-col">
+    <div className="bg-cyan-400 text-white text-center h-screen flex flex-col">
       <h1 className="mt-5 mb-auto text-4xl">Jardins.</h1>
-      <div className="border-black border-2 h-[90vh] w-full p-10">
-        <div className="bg-green-700 w-full h-full flex flex-col align-bottom justify-end">
+      <div className="bg-cyan-300 h-[90vh] w-full pt-10 flex flex-col justify-end">
+        <div className="bg-green-700 z-50 w-full h-16 px-5 pb-5 flex flex-row  items-end justify-start space-x-3">
+          <Plant />
+          <Plant />
           <Plant />
         </div>
       </div>
