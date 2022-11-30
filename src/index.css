@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes moving-cloud {
+  0% {
+    left: -15%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 115%;
+  }
+}
+
+.cloudAnimation-sm {
+  animation: moving-cloud 80s linear infinite;
+}
+
+.cloudAnimation-md {
+  animation: moving-cloud 60s linear infinite;
+}
+
+.cloudAnimation-lg {
+  animation: moving-cloud 45s linear infinite;
+}
