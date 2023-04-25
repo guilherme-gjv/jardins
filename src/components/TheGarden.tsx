@@ -1,5 +1,4 @@
-import React from "react";
-import Plant, { IPlantProps } from "./components/Plant/Plant";
+import Plant, { IPlantProps } from "./plant/Plant";
 
 const TheGarden: React.FC = () => {
   const plants: IPlantProps[] = [
@@ -27,7 +26,9 @@ const TheGarden: React.FC = () => {
       <div className="bg-cyan-300 h-[90vh] w-full pt-10 flex flex-col justify-end">
         <div className="bg-green-700 z-50 w-full h-16 px-5 pb-5 flex flex-row  items-end justify-start space-x-3">
           {plants.map((plant) => {
-            return <Plant name={plant.name} date={plant.date} />;
+            return (
+              <Plant key={plant.name} name={plant.name} date={plant.date} />
+            );
           })}
         </div>
       </div>

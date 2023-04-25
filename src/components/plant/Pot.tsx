@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface IPotProps {
   name: string;
   date: Date;

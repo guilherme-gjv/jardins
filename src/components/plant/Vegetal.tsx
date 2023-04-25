@@ -1,5 +1,3 @@
-import React from "react";
-
 const Vegetal: React.FC = () => (
   <div className="relative flex flex-row">
     <div className="bg-green-500 w-5 h-3 "></div>

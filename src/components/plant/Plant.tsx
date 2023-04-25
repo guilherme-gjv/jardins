@@ -1,4 +1,3 @@
-import React from "react";
 import Pot from "./Pot";
 import Vegetal from "./Vegetal";
 
