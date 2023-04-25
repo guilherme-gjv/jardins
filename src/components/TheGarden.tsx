@@ -1,25 +1,11 @@
+import { useState } from "react";
 import Plant, { IPlantProps } from "./plant/Plant";
+import { plantsMock } from "@/mock/plantsMock";
 
 const TheGarden: React.FC = () => {
-  const plants: IPlantProps[] = [
-    {
-      name: "Gui",
-      date: new Date(Date.now()),
-    },
-    {
-      name: "dudo",
-      date: new Date(Date.now()),
-    },
-    {
-      name: "dudu",
-      date: new Date(Date.now()),
-    },
-    {
-      name: "jezz",
-      date: new Date(Date.now()),
-    },
-  ];
+  const [plants, setPlants] = useState<IPlantProps[]>(plantsMock);
 
+  //* render
   return (
     <div className="bg-cyan-400 text-white text-center h-screen flex flex-col">
       <h1 className="mt-5 mb-auto text-4xl">Jardins.</h1>
