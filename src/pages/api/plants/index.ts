@@ -15,11 +15,11 @@ const Index = async (
       Object.values(data).forEach((plant) => {
         plants.push(plant as IPlant);
       });
-      return res.status(200).json({ response: plants as IPlant[] });
     } else {
       return res.status(404).json({ response: "Not found." });
     }
   });
+  return res.status(200).json({ response: plants as IPlant[] });
 };
 
 export default Index;
