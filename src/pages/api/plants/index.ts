@@ -8,7 +8,6 @@ const Index = async (
   res: NextApiResponse<{ response: IPlant[] | string }>
 ) => {
   let plants: IPlant[] = [];
-  console.log("alooo");
 
   onValue(ref(db), (snapshot) => {
     const data = snapshot.val();
