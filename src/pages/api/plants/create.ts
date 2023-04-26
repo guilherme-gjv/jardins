@@ -1,4 +1,3 @@
-import { IPlant } from "@/interfaces/IPlant";
 import { ref, set } from "@firebase/database";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { db } from "../../../../firebase";
