@@ -14,18 +14,17 @@ const Create = async (
       .json({ response: "Missing 'name' or 'email' fields." });
   }
 
-  set(ref(db, uid()), {
-    uid: uid(),
-    name: req.body.name,
-    email: req.body.email,
-    date: new Date(Date.now()).toString(),
-  })
-    .then(() => {
-      return res.status(200).json({ response: "Saved data." });
-    })
-    .catch(() => {
-      return res.status(500).json({ response: "Server error." });
+  try {
+    await set(ref(db, uid()), {
+      uid: uid(),
+      name: req.body.name,
+      email: req.body.email,
+      date: new Date(Date.now()).toString(),
     });
+    return res.status(200).json({ response: "Saved data." });
+  } catch (error) {
+    return res.status(500).json({ response: "Server error." });
+  }
 };
 
 export default Create;
