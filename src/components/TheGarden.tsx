@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Plant, { IPlantProps } from "./plant/Plant";
-import { plantsMock } from "@/mock/plantsMock";
 
 const TheGarden: React.FC = () => {
-  const [plants, setPlants] = useState<IPlantProps[]>(plantsMock);
+  //* states
+  const [plants, setPlants] = useState<IPlantProps[]>([]);
+
+  //* effects
+  useEffect(() => {
+    const fetchPlants = async () => {
+      const response = await fetch("/api/plants");
+      const data = await response.json();
+      setPlants(data.response);
+    };
+
+    fetchPlants();
+  }, []);
 
   //* render
   return (
