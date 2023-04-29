@@ -23,10 +23,10 @@ const Plant: React.FC<IPlantProps> = ({ name, date }) => {
   useEffect(() => {
     const newVegetals = [];
     for (let i = 0; i < numberOfVegetals; i++) {
-      newVegetals.push(<Vegetal />);
+      newVegetals.push(<Vegetal key={name + date + i} />);
     }
     setVegetals(newVegetals);
-  }, [numberOfVegetals]);
+  }, [date, name, numberOfVegetals]);
 
   //* render
   return (
