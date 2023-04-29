@@ -18,7 +18,7 @@ const Create = async (
       uid: uid(),
       name: req.body.name,
       email: req.body.email,
-      date: new Date(Date.now()).toString(),
+      date: Date.now(),
     });
     return res.status(200).json({ response: "Saved data." });
   } catch (error) {

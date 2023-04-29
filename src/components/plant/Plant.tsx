@@ -4,7 +4,7 @@ import Vegetal from "./Vegetal";
 
 export interface IPlantProps {
   name: string;
-  date: Date;
+  date: number;
 }
 
 const Plant: React.FC<IPlantProps> = ({ name, date }) => {
@@ -13,13 +13,7 @@ const Plant: React.FC<IPlantProps> = ({ name, date }) => {
 
   //* memos
   const numberOfVegetals: number = useMemo(() => {
-    return (
-      Math.floor(
-        (new Date(Date.now()).getTime() - date.getTime()) /
-          1000 /
-          SECONDS_IN_A_DAY
-      ) + 1
-    );
+    return Math.floor((Date.now() - date) / 1000 / SECONDS_IN_A_DAY) + 1;
   }, [date]);
 
   //* states
