@@ -1,9 +1,9 @@
 export interface IPotProps {
   name: string;
-  date: Date;
+  date: number;
 }
 
-const Pot: React.FC<IPotProps> = ({ name, date }) => {
+const Pot = ({ name, date }: IPotProps): JSX.Element => {
   return (
     <div id="pot" className="relative flex flex-row">
       <div className="bg-yellow-600 h-32 w-8 rounded-bl-[100%]"></div>
@@ -13,7 +13,7 @@ const Pot: React.FC<IPotProps> = ({ name, date }) => {
             {name}
           </p>
           <p className="bg-white text-sm text-black px-1 text-left rounded-md">
-            {date.toLocaleDateString("en-GB")}
+            {new Date(date).toLocaleDateString("en-GB")}
           </p>
         </div>
       </div>
