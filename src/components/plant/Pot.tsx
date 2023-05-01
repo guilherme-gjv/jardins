@@ -3,7 +3,7 @@ export interface IPotProps {
   date: number;
 }
 
-const Pot: React.FC<IPotProps> = ({ name, date }) => {
+const Pot = ({ name, date }: IPotProps): JSX.Element => {
   return (
     <div id="pot" className="relative flex flex-row">
       <div className="bg-yellow-600 h-32 w-8 rounded-bl-[100%]"></div>

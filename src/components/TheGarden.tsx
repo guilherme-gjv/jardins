@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Plant, { IPlantProps } from "./plant/Plant";
 
-const TheGarden: React.FC = () => {
+const TheGarden = (): JSX.Element => {
   //* states
   const [plants, setPlants] = useState<IPlantProps[]>([]);
 

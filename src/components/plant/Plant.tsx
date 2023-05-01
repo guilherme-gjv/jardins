@@ -7,7 +7,7 @@ export interface IPlantProps {
   date: number;
 }
 
-const Plant: React.FC<IPlantProps> = ({ name, date }) => {
+const Plant = ({ name, date }: IPlantProps): JSX.Element => {
   //* constants
   const SECONDS_IN_A_DAY = 86400;
 
