@@ -14,7 +14,7 @@ const TheGarden = (): JSX.Element => {
     };
 
     fetchPlants();
-  }, []);
+  });
 
   //* render
   return (
